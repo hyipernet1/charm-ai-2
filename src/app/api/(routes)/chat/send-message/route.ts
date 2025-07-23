@@ -91,6 +91,7 @@ export async function POST(req: NextRequest) {
 			user.subscription.plan === 'BASIC' ||
 			user.subscription.plan === 'PRO'
 		) {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
 			if (user?.credits?.getAdvice! <= 0) {
 				throw new ApiError('Not enough credits', 400, 'errors.server.not-enough-credits')
 			} else if (user?.credits?.getAdvice && user?.credits?.getAdvice > 0) {

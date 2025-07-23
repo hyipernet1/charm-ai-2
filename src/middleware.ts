@@ -5,7 +5,7 @@ import { defaultLocale, locales } from './lib/i18n'
 import { TOKEN } from './typing/enums'
 
 // Pages that require authentication
-const protectedRoutes = ['/profile', '/get-advice', '/get-reply', '/first-message']
+const protectedRoutes = ['/profile', '/get-advice', '/get-reply', '/first-message', '/see-naked']
 
 function getLocale(request: NextRequest) {
 	const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value

@@ -11,6 +11,7 @@ const translations = {
 
 export function getTranslation(key: TranslationKey, locale: Locale = 'en'): string {
 	const keys = key.split('.')
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let current: any = translations[locale]
 
 	for (const k of keys) {

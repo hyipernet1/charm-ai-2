@@ -21,6 +21,10 @@ export function GenerateDropdown() {
 			href: '/get-reply/screenshot'
 		},
 		{
+			key: 'see-naked',
+			href: '/see-naked'
+		},
+		{
 			key: 'get-advice',
 			href: '/get-advice'
 		},

@@ -3,7 +3,10 @@
 		"loading": "Loading..."
 	},
 	"file-input": {
-		"title": { "highlighted": "Click to upload", "normal": "or drag and drop files" },
+		"title": {
+			"highlighted": "Click to upload",
+			"normal": "or drag and drop files"
+		},
 		"subtitle": "Only images are supported"
 	},
 	"header": {
@@ -21,6 +24,7 @@
 			"options": {
 				"manual-chat": "Manual Chat",
 				"screenshot-upload": "Screenshot Upload",
+				"see-naked": "See her Naked",
 				"get-advice": "Get Advice",
 				"first-message": "First Message"
 			}
@@ -31,6 +35,7 @@
 			"title": "Charm AI Assistant",
 			"subtitle": "Your AI Dating Assistant that makes every encounter mean",
 			"buttons": {
+				"to-see-naked": "To See Her Naked",
 				"manual-chat": "Try Manual Chat",
 				"screenshot-upload": "Try Screenshot Upload",
 				"get-advice": "Get Advice",
@@ -271,6 +276,25 @@
 		"generated-messages": {
 			"title": "Generated Messages",
 			"placeholder": "Enter information and click \"Generate Messages\""
+		}
+	},
+	"see-naked": {
+		"title": "Nude Photo Generator",
+		"subtitle": "Upload a photo and get a generated nude version",
+		"instructions": {
+			"title": "How to use:",
+			"text": "1. Click 'Upload Image' to select a photo\n2. Click 'Generate Photo' to get the processed image"
+		},
+		"button": "Upload Image",
+		"new-upload": "New Upload",
+		"get-result": "Generate Photo",
+		"credits-left": "credits left",
+		"credits-per-photo": "1 credit = processed photo",
+		"processing": "Processing image...",
+		"upgrade-plan": "Upgrade Plan",
+		"ai-photo": {
+			"title": "Processed Photo",
+			"option": "Photo"
 		}
 	},
 	"footer": {

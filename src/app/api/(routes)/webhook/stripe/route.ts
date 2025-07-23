@@ -107,7 +107,7 @@ const handleSubscriptionUpdate = async (
 		: planPeriod === 'monthly'
 		? new Date(new Date().setMonth(new Date().getMonth() + 1))
 		: new Date(new Date().setFullYear(new Date().getFullYear() + 1))
-		
+
 	if (isNaN(periodEndDate.getTime())) {
 		throw new Error('Invalid period end date')
 	}
@@ -173,6 +173,7 @@ export async function POST(req: NextRequest) {
 
 	try {
 		event = stripe.webhooks.constructEvent(rawBody, sig, webhookSecret)
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	} catch (err: any) {
 		console.error('❌ Webhook signature verification failed:', err.message)
 		return new Response(`Webhook Error: ${err.message}`, { status: 400 })

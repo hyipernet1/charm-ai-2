@@ -2,6 +2,7 @@ import { prisma } from '@/lib/prisma'
 import jwt from 'jsonwebtoken'
 
 class TokenService {
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	generateTokens(payload: any) {
 		const accessToken = jwt.sign(payload, process.env.ACCESS_SECRET!, {
 			expiresIn: '30m'

@@ -4,6 +4,7 @@ export class UserTokenDto {
 	id: string
 	email: string
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	constructor(user: any) {
 		this.id = user.id
 		this.email = user.email
@@ -19,6 +20,7 @@ export class UserDto {
 	subscription: Subscription | null
 	credits: Credits | null
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	constructor(user: any) {
 		this.firstName = user.firstName
 		this.lastName = user.lastName

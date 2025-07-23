@@ -81,6 +81,7 @@ export async function POST(req: NextRequest) {
 		// Deduct credits only after successful operation
 
 		if (!user.subscription || user.subscription.plan === 'BASIC') {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
 			if (user?.credits?.getReply! <= 0) {
 				throw new ApiError('Not enough credits', 400, 'errors.server.not-enough-credits')
 			} else if (user?.credits?.getReply && user?.credits?.getReply > 0) {

@@ -91,6 +91,7 @@ class AuthService {
 		if (!refreshToken || !refreshToken.length)
 			throw new ApiError('Unauthorized', 401, 'errors.server.unauthorized')
 
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const userData: any = tokenService.validateRefresh(refreshToken)
 		const tokenFromDb = await tokenService.findRefresh(refreshToken)
 		if (!userData || !tokenFromDb)

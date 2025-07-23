@@ -8,6 +8,7 @@ export async function checkAuth(req: NextRequest) {
 
 	if (!token) throw new ApiError('Unauthorized', 401, 'errors.server.unauthorized')
 
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const userData = tokenService.validateAccess(token) as any
 
 	if (!userData.id) throw new ApiError('Unauthorized', 401, 'errors.server.unauthorized')
