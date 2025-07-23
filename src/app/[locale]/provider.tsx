@@ -19,7 +19,10 @@ export function Provider({ children }: { children: React.ReactNode }) {
 				if (token) {
 					const { data } = await authService.refresh()
 					H.identify(data.user.email, {
-						...data.user
+						firstName: data.user.firstName,
+						lastName: data.user.lastName,
+						email: data.user.email,
+						id: data.user.id
 					})
 				} else {
 					setUser(null)
