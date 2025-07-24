@@ -29,7 +29,7 @@ model Subscription {
   id String @id @default(cuid())
 
   userId               String @unique
-  stripeSubscriptionId String @unique
+  stripeSubscriptionId String? @unique
   stripeCustomerId     String
   stripePriceId        String
 
