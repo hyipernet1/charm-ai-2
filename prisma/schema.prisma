@@ -57,7 +57,7 @@ model Credits {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String @unique
 
-  getReply  Int @default(5)
+  getReply  Int @default(1)
   getPickup Int @default(5)
   getAdvice Int @default(10)
 
