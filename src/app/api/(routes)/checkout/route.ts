@@ -41,7 +41,6 @@ export async function POST(req: NextRequest) {
 					create: {
 						userId: user.id,
 						stripeCustomerId: customerId,
-						stripeSubscriptionId: '',
 						stripePriceId: priceId,
 						plan: 'BASIC' as PLAN,
 						status: 'INACTIVE' as PLAN_STATUS,
